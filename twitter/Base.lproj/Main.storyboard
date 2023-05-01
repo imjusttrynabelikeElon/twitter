@@ -93,7 +93,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Create Account">
                                             <attributes>
-                                                <font key="NSFont" size="24" name=".SFNS-Regular"/>
+                                                <font key="NSFont" metaFont="system" size="24"/>
                                                 <font key="NSOriginalFont" size="12" name="Helvetica"/>
                                             </attributes>
                                         </fragment>
