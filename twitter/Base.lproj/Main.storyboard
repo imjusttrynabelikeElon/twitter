@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="K7Y-pQ-5yz">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -428,22 +428,13 @@
             </objects>
             <point key="canvasLocation" x="3040.4580152671756" y="-35.211267605633807"/>
         </scene>
-        <!--View Controller-->
+        <!--Twitter Home Page-->
         <scene sceneID="Gbo-um-o1o">
             <objects>
-                <viewController storyboardIdentifier="homePage" id="fUz-LZ-Pq5" customClass="ViewController" customModule="twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="homePage" id="fUz-LZ-Pq5" customClass="TwitterHomePage" customModule="twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pUE-Kq-6fc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vDW-sA-Yua">
-                                <rect key="frame" x="175" y="183" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="SGm-0V-wDN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
@@ -452,7 +443,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nWK-I9-6QS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4773.2824427480919" y="-22.535211267605636"/>
+            <point key="canvasLocation" x="6439" y="-681"/>
         </scene>
         <!--Twitter Tab Bar-->
         <scene sceneID="ADG-Wy-uY6">
@@ -545,10 +536,10 @@
             </objects>
             <point key="canvasLocation" x="8230" y="-656"/>
         </scene>
-        <!--Twitter Home Page-->
+        <!--View Controller-->
         <scene sceneID="Yra-YN-9aE">
             <objects>
-                <viewController id="93L-2u-K7n" customClass="TwitterHomePage" customModule="twitter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="93L-2u-K7n" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KkA-Ei-u80">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

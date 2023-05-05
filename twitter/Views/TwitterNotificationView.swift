@@ -17,6 +17,6 @@ class TwitterNotificationView: UIViewController {
         super.viewDidLoad()
         
         
-        view.backgroundColor = .cyan
+        view.backgroundColor = .white
     }
 }
