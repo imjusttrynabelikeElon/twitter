@@ -33,6 +33,7 @@ class TwitterSignUpHomePage: UIViewController {
         super.viewDidLoad()
         
         
+     
         if let nextButton = nextButton  {
             // this if let allows the code to work becuase to start the button is nil and once we get to the button it will set it to nextButton so it could work.
               nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
@@ -54,7 +55,7 @@ class TwitterSignUpHomePage: UIViewController {
         self.present(vc1, animated: true, completion: nil)
     }
     
-    
+
   
 
 }

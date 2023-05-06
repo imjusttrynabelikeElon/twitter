@@ -100,8 +100,8 @@ class TwitterHomePage: UIViewController {
         NSLayoutConstraint.activate([
             addTweetButton.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 143),
             addTweetButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -25),
-            addTweetButton.widthAnchor.constraint(equalToConstant: 116),
-            addTweetButton.heightAnchor.constraint(equalToConstant: 56)
+            addTweetButton.widthAnchor.constraint(equalToConstant: 95),
+            addTweetButton.heightAnchor.constraint(equalToConstant: 77)
         ])
     }
     

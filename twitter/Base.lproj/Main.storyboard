@@ -23,13 +23,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See whats's happening in the world right now." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRn-Qt-GDi">
-                                <rect key="frame" x="54" y="146" width="284" height="62.333333333333343"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <rect key="frame" x="54" y="146" width="284" height="57.333333333333343"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1DC-V1-1zZ">
-                                <rect key="frame" x="54" y="349" width="284" height="44"/>
+                                <rect key="frame" x="54" y="344" width="284" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="RaC-fl-j1D"/>
@@ -51,7 +51,7 @@
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZND-Cs-tI1">
-                                <rect key="frame" x="54" y="424" width="284" height="43"/>
+                                <rect key="frame" x="54" y="419" width="284" height="43"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="AmT-XT-exE"/>
@@ -71,19 +71,19 @@
                                 </buttonConfiguration>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="googleLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="TWN-ZH-hUY">
-                                <rect key="frame" x="59" y="358" width="58" height="27"/>
+                                <rect key="frame" x="59" y="353" width="58" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="F3A-Bi-djM"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="appleLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="GDq-7s-JfQ">
-                                <rect key="frame" x="66" y="432" width="51" height="27"/>
+                                <rect key="frame" x="66" y="427" width="51" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="EYJ-zY-lXO"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8mJ-Ew-OfO">
-                                <rect key="frame" x="53" y="538" width="279" height="51"/>
+                                <rect key="frame" x="53" y="533" width="279" height="51"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="51" id="sxH-Pp-BZx"/>
                                 </constraints>
@@ -104,7 +104,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="By signing up, you agree to our " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2r-zt-djx">
-                                <rect key="frame" x="35" y="658" width="246" height="21"/>
+                                <rect key="frame" x="35" y="653" width="246" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="MH5-Rh-k9v"/>
                                 </constraints>
@@ -113,7 +113,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFq-MI-VQ8">
-                                <rect key="frame" x="45" y="689" width="27" height="18"/>
+                                <rect key="frame" x="45" y="684" width="27" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="6v7-gB-FDA"/>
                                 </constraints>
@@ -122,7 +122,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Have an account already?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bs5-aa-vlQ">
-                                <rect key="frame" x="38" y="761" width="181" height="18"/>
+                                <rect key="frame" x="38" y="756" width="181" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="18" id="uWS-or-UJT"/>
                                 </constraints>
@@ -131,16 +131,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter recreated By Karon B" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f30-JA-MOb">
-                                <rect key="frame" x="84" y="270" width="224" height="21"/>
+                                <rect key="frame" x="84" y="265" width="224" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="x7g-RS-Whb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNk-zb-SId">
-                                <rect key="frame" x="205" y="755" width="88" height="28"/>
+                                <rect key="frame" x="205" y="750" width="88" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="Ocs-mw-9HO"/>
                                 </constraints>
@@ -153,7 +153,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y9J-BA-xuX">
-                                <rect key="frame" x="233" y="653" width="160" height="31"/>
+                                <rect key="frame" x="233" y="648" width="160" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="bHV-L0-yps"/>
                                 </constraints>
@@ -166,7 +166,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJJ-iX-Kem">
-                                <rect key="frame" x="29" y="681" width="178" height="34"/>
+                                <rect key="frame" x="29" y="676" width="178" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Jvl-0W-PYL"/>
                                 </constraints>
