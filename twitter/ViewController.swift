@@ -20,8 +20,8 @@ class TwitterHomePage: UIViewController {
 
         view.backgroundColor = .white
 
-        
-      
+     
+
         
         let tabBarController = CustomTabBarController()
         tabBarController.delegate = self
@@ -50,16 +50,12 @@ class TwitterHomePage: UIViewController {
 
         view.addSubview(tabBarController.view)
         tabBarController.view.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            tabBarController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-            tabBarController.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            tabBarController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            tabBarController.view.heightAnchor.constraint(equalToConstant: 99)
-        ])
+      
+       
 
       
         tableViewContainer.translatesAutoresizingMaskIntoConstraints = false
+        tableViewContainer.isUserInteractionEnabled = true
         view.addSubview(tableViewContainer)
 
         let twitterHomeFeedViewController = twitterHomeFeedTableView(style: .plain)
@@ -75,12 +71,16 @@ class TwitterHomePage: UIViewController {
         ])
 
         NSLayoutConstraint.activate([
+            tabBarController.view.leadingAnchor.constraint(equalTo: view.leadingAnchor),
+            tabBarController.view.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            tabBarController.view.trailingAnchor.constraint(equalTo: view.trailingAnchor),
+            tabBarController.view.heightAnchor.constraint(equalToConstant: 2),
+
             tableViewContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             tableViewContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableViewContainer.bottomAnchor.constraint(equalTo: view.bottomAnchor),
-            tableViewContainer.topAnchor.constraint(equalTo: twitterHomeFeedViewController.view.topAnchor)
+            tableViewContainer.topAnchor.constraint(equalTo: tabBarController.view.bottomAnchor, constant: 10)
         ])
-
         let twitterLogoImageView = UIImageView(image: UIImage(named: "twitterLogo"))
         twitterLogoImageView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(twitterLogoImageView)
@@ -128,6 +128,7 @@ extension TwitterHomePage: UITabBarControllerDelegate {
         // Remove any existing blue line views
         currentLineView?.removeFromSuperview()
         
+       
         // Check if the selected view controller is the one for the "For you" tab bar item
         if tabBarController.selectedIndex == 0 {
             // Show the table view container

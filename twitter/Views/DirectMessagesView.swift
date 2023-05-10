@@ -17,5 +17,7 @@ class DirectMessagesView: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = .white
+        
+      
     }
 }

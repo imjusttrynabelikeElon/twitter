@@ -5,8 +5,8 @@
 //  Created by Karon Bell on 5/4/23.
 //
 
-import Foundation
-import UIKit
+ import Foundation
+ import UIKit
 
 struct Tweet {
     
@@ -26,7 +26,7 @@ struct Tweet {
     let share: String
     
  
-}
+   }
 
 
 
@@ -38,15 +38,22 @@ class MyTableViewCell: UITableViewCell {
     let profileImageView = UIImageView()
     let titleLabel = UILabel()
     let userNameLabel = UILabel()
-    let commentsLabel = UIImageView()
+    let commentsLabel = UIButton()
+    
+   
+
+    
+        
+
     let numberOfCommentsLabel = UILabel()
-    let retweetsLabel = UIImageView()
+    let retweetsLabel = UIButton()
     let numberOfRetweetsLabel = UILabel()
-    let likesLabel = UIImageView()
+    let likesLabel = UIButton()
     let numberOfLikesLabel = UILabel()
-    let viewsLabel = UIImageView()
+    let viewsLabel = UIButton()
     let numberOfViewsLabel = UILabel()
-    let shareLabel = UIImageView()
+    let shareLabel = UIButton()
+    
     
     
     
@@ -68,21 +75,8 @@ class MyTableViewCell: UITableViewCell {
         numberOfViewsLabel.translatesAutoresizingMaskIntoConstraints = false
         shareLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        
-        
-        
-        /*
-    
-         let commentsLabel = UILabel()
-         let numberOfCommentsLabel = UILabel()
-         let retweetsLabel = UILabel()
-         let numberOfRetweetsLabel = UILabel()
-         let likesLabel = UILabel()
-         let numberOfLikesLabel = UILabel()
-         let viewsLabel = UILabel()
-         let numberOfViewsLabel = UILabel()
-         let shareLabel = UILabel()
-         */
+        commentsLabel.addTarget(self, action: #selector(didTapCommentsLabel), for: .touchUpInside)
+     
         
         contentView.addSubview(nameLabel)
         contentView.addSubview(messageLabel)
@@ -98,6 +92,8 @@ class MyTableViewCell: UITableViewCell {
         contentView.addSubview(viewsLabel)
         contentView.addSubview(numberOfViewsLabel)
         contentView.addSubview(shareLabel)
+        
+    
         
         NSLayoutConstraint.activate([
             
@@ -117,7 +113,7 @@ class MyTableViewCell: UITableViewCell {
             userNameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 12),
             
             messageLabel.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 16),
-            messageLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: -6),
+            messageLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: -45),
             messageLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             messageLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
             
@@ -152,21 +148,7 @@ class MyTableViewCell: UITableViewCell {
             
             shareLabel.leadingAnchor.constraint(equalTo: numberOfCommentsLabel.trailingAnchor, constant: 276),
             shareLabel.topAnchor.constraint(equalTo: messageLabel.bottomAnchor, constant: -16)
-            
-            /*
-             
-             let commentsLabel = UILabel()
-             let numberOfCommentsLabel = UILabel()
-             let retweetsLabel = UILabel()
-             let numberOfRetweetsLabel = UILabel()
-             let likesLabel = UILabel()
-             let numberOfLikesLabel = UILabel()
-             let viewsLabel = UILabel()
-             let numberOfViewsLabel = UILabel()
-             let shareLabel = UILabel()
-             */
-            
-            
+         
         ])
         
         // Set the corner radius of the image view
@@ -174,10 +156,19 @@ class MyTableViewCell: UITableViewCell {
         profileImageView.clipsToBounds = true
     }
     
+    
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-             
+           
+    @objc func didTapCommentsLabel() {
+          // Handle the tap event here
+        
+        print("Jam")
+      }
+
+
     
     
     func configure(with tweet: Tweet) {
@@ -187,15 +178,17 @@ class MyTableViewCell: UITableViewCell {
         profileImageView.image = UIImage(named: tweet.profileImageName)
         titleLabel.text = tweet.title
         userNameLabel.text = tweet.userName
-        commentsLabel.image = UIImage(systemName: "message")
+       
+        commentsLabel.setImage(UIImage(systemName: "message"), for: .normal)
+        commentsLabel.translatesAutoresizingMaskIntoConstraints = false
         numberOfCommentsLabel.text = "\(tweet.numberOfComments)"
-        retweetsLabel.image = UIImage(systemName: "repeat")
+        retweetsLabel.setImage(UIImage(systemName: "repeat"), for: .normal)
         numberOfRetweetsLabel.text = "\(tweet.numberOfRetweets)"
-        likesLabel.image = UIImage(systemName: "suit.heart")
+        likesLabel.setImage(UIImage(systemName: "suit.heart"), for: .normal)
         numberOfLikesLabel.text = "\(tweet.numberOfLikes)"
-        viewsLabel.image = UIImage(systemName: "eye.fill")
+        viewsLabel.setImage(UIImage(systemName: "eye.fill"), for: .normal)
         numberOfViewsLabel.text = "\(tweet.numberOfViews)"
-        shareLabel.image = UIImage(systemName: "tray.and.arrow.down.fill")
+        shareLabel.setImage(UIImage(systemName: "tray.and.arrow.down.fill"), for: .normal)
         
         
     }
@@ -203,90 +196,57 @@ class MyTableViewCell: UITableViewCell {
     
 }
 
+class TwitterTabBarContainerr: UIViewController {
+
+    private let tabBar = TwitterTabBar()
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        let navController = UINavigationController(rootViewController: tabBar)
+        addChild(navController)
+        view.addSubview(navController.view)
+        navController.view.frame = view.bounds
+        navController.didMove(toParent: self)
+    }
+}
 
 
 class twitterHomeFeedTableView: UITableViewController {
-
-  
+    
+    
     let twitterLogoImageView = UIImageView(image: UIImage(named: "twitterLogo"))
     let addTweetbutton = UIButton(frame: CGRect(x: 150, y: 130, width: 89, height: 64))
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       // performSegue(withIdentifier: "tweetCell", sender: self)
+        
         tableView.delegate = self
         tableView.dataSource = self
-    
+        tableView.isUserInteractionEnabled = true
         
         
-        
-        
-        
-        
-        /*
-    
-         let commentsLabel = UILabel()
-         let numberOfCommentsLabel = UILabel()
-         let retweetsLabel = UILabel()
-         let numberOfRetweetsLabel = UILabel()
-         let likesLabel = UILabel()
-         let numberOfLikesLabel = UILabel()
-         let viewsLabel = UILabel()
-         let numberOfViewsLabel = UILabel()
-         let shareLabel = UILabel()
-         */
- 
         tabBarController?.delegate = self
-
+        
         tableView.register(MyTableViewCell.self, forCellReuseIdentifier: "tweetCell")
-
+        
         
         // Set the delegate of the UITabBarController to self
-         self.tabBarController?.delegate = self
-       
-       tableView.translatesAutoresizingMaskIntoConstraints = false
+        self.tabBarController?.delegate = self
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         twitterLogoImageView.translatesAutoresizingMaskIntoConstraints = false
         addTweetbutton.translatesAutoresizingMaskIntoConstraints = false
         
-        
-      
-        /*
-    
-         let commentsLabel = UILabel()
-         let numberOfCommentsLabel = UILabel()
-         let retweetsLabel = UILabel()
-         let numberOfRetweetsLabel = UILabel()
-         let likesLabel = UILabel()
-         let numberOfLikesLabel = UILabel()
-         let viewsLabel = UILabel()
-         let numberOfViewsLabel = UILabel()
-         let shareLabel = UILabel()
-         */
-
-        NSLayoutConstraint.activate([
-         //   tableView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-         //   tableView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
-         //   tableView.widthAnchor.constraint(equalTo: view.widthAnchor),
-         //   tableView.heightAnchor.constraint(equalToConstant: 300),
-            
-         //   twitterLogoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-          ///  twitterLogoImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 20),
-          //  twitterLogoImageView.widthAnchor.constraint(equalToConstant: 59),
-          //  twitterLogoImageView.heightAnchor.constraint(equalToConstant: 34),
-            
-          //  addTweetbutton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-          //  addTweetbutton.topAnchor.constraint(equalTo: view.topAnchor, constant: 70),
-          //  addTweetbutton.widthAnchor.constraint(equalToConstant: 89),
-           // addTweetbutton.heightAnchor.constraint(equalToConstant: 64)
-        ])
-
     }
-
+    
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tweets.count
     }
-
+    
     
     let tweets: [Tweet] = [
         
@@ -297,40 +257,53 @@ class twitterHomeFeedTableView: UITableViewController {
         Tweet(name: "Elon Musk", message: "I love this app can you tell?🤣", profileImageName: "elom", title: "", userName: "@elonMusk", comments: "KUOH", numberOfComments: 21, retweet: "KIHUOL", numberOfRetweets: 23, likes: "IKUHU", numberOfLikes: 23, views: "KUHO", numberOfViews: 54, share: "IHLPHI"),
         Tweet(name: "justin Bieber", message: "will you be my Baby?♥️", profileImageName: "jb", title: "", userName: "@justinBieber", comments: "KUOH", numberOfComments: 21, retweet: "KIHUOL", numberOfRetweets: 23, likes: "IKUHU", numberOfLikes: 23, views: "KUHO", numberOfViews: 54, share: "IHLPHI")
         
-        
-        /*
-    
-         let commentsLabel = UILabel()
-         let numberOfCommentsLabel = UILabel()
-         let retweetsLabel = UILabel()
-         let numberOfRetweetsLabel = UILabel()
-         let likesLabel = UILabel()
-         let numberOfLikesLabel = UILabel()
-         let viewsLabel = UILabel()
-         let numberOfViewsLabel = UILabel()
-         let shareLabel = UILabel()
-         */
-        
     ]
-
+    
+    
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "tweetCell", for: indexPath) as? MyTableViewCell else {
             fatalError("Unable to dequeue TweetTableViewCell")
+            
         }
         
         let tweet = tweets[indexPath.row]
         cell.configure(with: tweet)
+        cell.isUserInteractionEnabled = true
         return cell
-
+        
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Function: tableView(_:didSelectRowAt:)")
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "detail") as? TwitterHomeViewDetailViewController else {
+            print("failed to instantiate detail view controller")
+            return
+        }
+        vc.selectedTweet = tweets[indexPath.row].message
+        print("selectedTweet set")
+   
+             // ...
+             if let navVC = tabBarController?.navigationController {
+                 navVC.pushViewController(vc, animated: true)
+             } else {
+                 let navVC = UINavigationController(rootViewController: vc)
+                 tabBarController?.present(navVC, animated: true, completion: nil)
+             }
+         
     }
 
 
-    
+
+
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 111
     }
+    
+    
+   
 }
-
 
 extension twitterHomeFeedTableView: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
@@ -341,5 +314,6 @@ extension twitterHomeFeedTableView: UITabBarControllerDelegate {
             tableView.reloadData()
             print("JGHV")
         }
+        
     }
 }

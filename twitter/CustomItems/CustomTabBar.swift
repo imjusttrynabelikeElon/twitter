@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+// okay the probelm is that the view only pushes when Its nav controller is the intalal view
 
 
 import UIKit
