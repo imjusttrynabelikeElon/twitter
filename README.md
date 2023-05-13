@@ -49,10 +49,20 @@ Twitters ForYou Page TabBar
 
 
 
+<img width="572" alt="Screenshot 2023-05-13 at 4 22 40 AM" src="https://github.com/imjusttrynabelikeElon/twitter/assets/106272587/4ba81b93-dd6b-4204-b290-c927b6584bde">
 
 
 
-<img width="624" alt="Screenshot 2023-05-06 at 5 06 43 PM" src="https://user-images.githubusercontent.com/106272587/236646575-3b11ca5f-aa04-41ce-b424-99cffa333153.png">
+
+
+Tweet
+
+
+
+
+
+
+<img width="550" alt="Screenshot 2023-05-13 at 4 23 02 AM" src="https://github.com/imjusttrynabelikeElon/twitter/assets/106272587/708f27dc-eb1b-4cc6-889a-54310a535ac1">
 
 
 
