@@ -1,6 +1,11 @@
 # Twitter-clone-with-own-touches
 Im in the mist of buliding a Twiiter clone with all the same features of the newest version of twitter. So far I have bulit out the home screen and the sign in and create an account UI. 
 
+Launch Page
+
+<img width="615" alt="Screenshot 2023-05-13 at 4 51 16 AM" src="https://github.com/imjusttrynabelikeElon/twitter/assets/106272587/88b8ec46-978e-4f33-90a2-e027860937a0">
+
+
 
 Home Page
 
